@@ -62,6 +62,7 @@ export interface GuiState {
         confirmUnsavedChanges: boolean
         klipperRestartMethod: 'FIRMWARE_RESTART' | 'RESTART'
         tabSize: number
+        fileStructureSidebar: boolean
     }
     gcodeViewer: {
         extruderColors: string[]
@@ -131,6 +132,13 @@ export interface GuiState {
         hideOtherInstances: boolean
     }
     view: {
+        afc: {
+            hiddenExtruders: string[]
+            hiddenUnits: string[]
+            showFilamentName: boolean
+            showLaneInfinite: boolean
+            showUnitIcons: boolean
+        }
         blockFileUpload: boolean
         configfiles: {
             countPerPage: number
@@ -151,6 +159,7 @@ export interface GuiState {
         }
         gcodefiles: {
             countPerPage: number
+            search: string
             sortBy: string
             sortDesc: boolean
             showHiddenFiles: boolean
